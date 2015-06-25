@@ -33,12 +33,12 @@ class ViewController: UIViewController {
             return
         }
 
-        let texture = drawable.texture
+        let framebuffer = drawable.texture
 
         let cornflowerBlue = MTLClearColorMake(100/255.0, 149/255.0, 237/255.0, 1.0)
 
         let passDescriptor = MTLRenderPassDescriptor()
-        passDescriptor.colorAttachments[0].texture = texture
+        passDescriptor.colorAttachments[0].texture = framebuffer
         passDescriptor.colorAttachments[0].loadAction = MTLLoadAction.Clear
         passDescriptor.colorAttachments[0].clearColor = cornflowerBlue
         passDescriptor.colorAttachments[0].storeAction = MTLStoreAction.Store
