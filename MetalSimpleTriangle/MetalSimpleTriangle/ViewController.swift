@@ -86,7 +86,7 @@ class ViewController: UIViewController {
         commandEncoder.setRenderPipelineState(pipelineState)
         commandEncoder.setVertexBuffer(positionBuffer, offset: 0, atIndex: 0)
         commandEncoder.setVertexBuffer(colorBuffer, offset: 0, atIndex: 1)
-        commandEncoder.drawPrimitives(MTLPrimitiveType.Triangle, vertexStart: 0, vertexCount: 3, instanceCount: 1)
+        commandEncoder.drawPrimitives(MTLPrimitiveType.Triangle, vertexStart: 0, vertexCount: 3)
         commandEncoder.endEncoding()
         
         commandBuffer.presentDrawable(drawable)
